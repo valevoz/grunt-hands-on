@@ -11,10 +11,9 @@
     <link rel="stylesheet" media="screen" href="../assets/css/rainbow.css">
 </head>
 <body ng-controller="GruntController">
-<table>
-    <tr ng-repeat="color in colors">
-        <td ng-class="color">{{color}}</td>
-    </tr>
-</table>
+<div ng-repeat="color in colors" ng-class="color.color"
+     ng-style="{'position':'absolute','top': color.top + '%', 'left': color.left + '%', 'font-size':color.size + 'px'}">
+    {{color.color}}
+</div>
 </body>
 </html>
